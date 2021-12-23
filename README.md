@@ -10,7 +10,7 @@ conda install pytorch==1.4.0 torchvision==0.5.0 cpuonly -c pytorch
 ```
 By the way, you can also use the pytorch with cuda to train this baseline.
 ### Prepare Datasets
-You need to put the `./mini_nico/train` and `./mini_nico/test` in [Mini-NICO dataset](https://drive.google.com/file/d/1tdgXsaKbjZ9eiIsq0fPgL166WESj4MmN/view?usp=sharing) to the `./data/` directory like
+You need to create the `./data/` folder and put the `./mini_nico/train` and `./mini_nico/test` in [Mini-NICO dataset](https://drive.google.com/file/d/1tdgXsaKbjZ9eiIsq0fPgL166WESj4MmN/view?usp=sharing) to the `./data/` directory like
 ```
 data
 ├── train
