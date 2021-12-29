@@ -64,9 +64,11 @@ def test(model, args):
     count = 1
     with torch.no_grad():
         imgs = os.listdir(args.test_img_path)
+        # prevent reading irrelevant files
+        imgs = [img for img in imgs if img.split('.')[-1] == 'jpg']
         imgs.sort(key=lambda x : int(x.split('.')[0]))
         for img in imgs:
-            image = cv2.imread(args.test_img_path + img)
+            image = cv2.imread(os.path.join(args.test_img_path, img))
             input_var = test_transform()(image)
             input_var = input_var.unsqueeze(0)
           
